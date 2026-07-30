@@ -8,4 +8,4 @@ setImmediate(() =>
 process.nextTick(() => 
     console.log("4: nextTick")
 );
-console.log("5: end");
+console.log("4: end");

@@ -1,13 +1,10 @@
-import http from"http";
+import http from "http";
 
-const server=http.createServer();
-
-server.on("request",(req,res)=>{
-    res.write("<h1>Welcome to server side programming</h1>");
-    res.write("<h2>Nodemon is tracking changes in the file and automatically restarts the server</h2>");
-    res.end();
+const server = http.createServer((req, res) => {
+  res.setHeader("Content-Type", "text/html");
+  res.end("<h1 style = 'color: blue;'>Welcome to server</h1>");
 });
 
-server.listen(3000,()=>{
-    console.log("Server is running on port 3000");
+server.listen(3000, () => {
+  console.log("Server is running on port 3000");
 });
